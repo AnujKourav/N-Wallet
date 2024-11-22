@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>N Wallet - File Manager</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <style>
+        #uploadFileButton {
+            background-color: #007bff; /* Blue color */
+            color: white;
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+        }
+        #uploadFileButton:hover {
+            background-color: #0056b3; /* Darker blue on hover */
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <a class="navbar-brand" href="#">N Wallet</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+            aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Notes Manager</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="fileManager.html">File Manager</a>
+                </li>
+            </ul>
+            <form class="form-inline my-2 my-lg-0"> 
+                <input class="form-control mr-sm-2" id="searchFileTxt" type="search" placeholder="Search Files" aria-label="Search"> 
+                <button class="btn btn-outline-success my-2 my-sm-0" type="button">Search</button>
+        </div>
+    </nav>
+    <div class="container my-3"> 
+        <h1>File Manager</h1> 
+        <div class="card"> 
+            <div class="card-body"> 
+                <h5 class="card-title">Upload Files</h5> 
+                <div class="form-group"> 
+                    <input type="file" class="form-control" id="fileInput" multiple> 
+                </div> 
+                <button class="btn mt-2" id="uploadFileButton">Upload File</button> 
+            </div> 
+        </div> 
+            <div id="uploadedFilesSection" class="mt-3">
+                <h2>Uploaded Files</h2> </div> </div>
+    <script src="fileManager.js"></script>
+</body>
+</html>
