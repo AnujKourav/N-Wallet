@@ -1,0 +1,54 @@
+body {
+    background-color: #f8f9fa;
+}
+
+/* Card styling for each Note */
+.card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    border-radius: 10px;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+}
+
+/* For Search Input Toggle Animation */
+#searchInput {
+    transition: width 0.4s ease;
+}
+
+#searchInput.d-none {
+    width: 0;
+}
+
+#searchInput:not(.d-none) {
+    width: 200px;
+}
+
+/* Nice Fade In Animation when Notes load */
+.fade-in {
+    animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0; transform: translateY(10px); }
+    100% { opacity: 1; transform: translateY(0); }
+}
+
+/* Minor improvement for Add Note form */
+#noteTitle,
+#noteContent,
+#noteTag,
+#noteColor {
+    font-size: 16px;
+}
+
+/* Responsive Fixes */
+@media (max-width: 768px) {
+    #searchInput {
+        width: 150px;
+    }
+}
+
+

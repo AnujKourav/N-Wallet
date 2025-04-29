@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login - NWallet</title>
+  <link rel="stylesheet" href="stylelogin.css">
+</head>
+<body>
+<div class="form-container">
+  <h2>Login</h2>
+  <input type="email" id="loginEmail" placeholder="Email" required>
+  <input type="password" id="loginPassword" placeholder="Password" required>
+  <button id="loginBtn">Login</button>
+  <p>Don't have an account? <a href="register.html">Register Here</a></p>
+</div>
+
+<!-- Firebase Scripts -->
+<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+<script src="firebaseConfig.js"></script>
+
+<script>
+// Login Code
+document.getElementById("loginBtn").addEventListener("click", function() {
+    const email = document.getElementById("loginEmail").value.trim();
+    const password = document.getElementById("loginPassword").value.trim();
+
+    if (!email || !password) {
+        alert("Please fill all fields!");
+        return;
+    }
+
+    firebase.auth().signInWithEmailAndPassword(email, password)
+      .then(() => {
+          alert("Logged in successfully!");
+          window.location.href = "index.html";
+      })
+      .catch((error) => {
+          alert(error.message);
+      });
+});
+</script>
+</body>
+</html>

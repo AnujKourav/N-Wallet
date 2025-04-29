@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>NWallet - Notes Manager</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+  <a class="navbar-brand" href="#">NWallet</a>
+  <div class="collapse navbar-collapse justify-content-end">
+    <form class="form-inline">
+      <input id="searchInput" class="form-control mr-2" type="search" placeholder="Search notes..." aria-label="Search">
+      <select id="tagFilter" class="form-control mr-2">
+        <option value="">All Tags</option>
+      </select>
+      <button id="logoutBtn" class="btn btn-danger">Logout</button>
+    </form>
+  </div>
+</nav>
+
+<div class="container my-5">
+  <div class="card mb-5 shadow-sm">
+    <div class="card-body">
+      <h3 class="mb-4 text-center">Add a New Note</h3>
+      <input type="text" id="noteTitle" class="form-control mb-3" placeholder="Note Title">
+      <textarea id="noteContent" class="form-control mb-3" rows="3" placeholder="Note Content"></textarea>
+      <input type="text" id="noteTag" class="form-control mb-3" placeholder="Tag (e.g., Work, Personal)">
+      <select id="noteColor" class="form-control mb-3">
+        <option value="#ffffff" selected>None</option>
+        <option value="#f28b82">Red</option>
+        <option value="#fbbc04">Orange</option>
+        <option value="#fff475">Yellow</option>
+        <option value="#ccff90">Green</option>
+        <option value="#a7ffeb">Teal</option>
+        <option value="#cbf0f8">Blue</option>
+        <option value="#aecbfa">Dark Blue</option>
+        <option value="#d7aefb">Purple</option>
+        <option value="#fdcfe8">Pink</option>
+        <option value="#e6c9a8">Brown</option>
+        <option value="#e8eaed">Gray</option>
+      </select>
+      <button id="addNoteBtn" class="btn btn-success btn-block mt-3">Add Note</button>
+    </div>
+  </div>
+
+  <h3 class="text-center mb-4">Your Notes</h3>
+  <div id="notes" class="row"></div>
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-app-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-auth-compat.js"></script>
+<script src="https://www.gstatic.com/firebasejs/9.22.2/firebase-firestore-compat.js"></script>
+
+<script src="firebaseConfig.js"></script>
+<script src="auth.js"></script>
+<script src="app.js"></script>
+
+
+</body>
+</html>
