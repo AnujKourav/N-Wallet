@@ -1,3 +1,7 @@
+## 🌍 Live Site
+🔗 [Visit Deployed App](https://nwallet-4fe43.web.app)
+
+
 # 📝 NWallet - Firebase Notes App
 
 A modern note-taking web application built using **Firebase Authentication** and **Cloud Firestore**.  
@@ -35,3 +39,6 @@ Supports login/register, add/edit/delete notes, pin/unpin, search, and tag filte
 2. Open index.html in browser
 
 🔐 Make sure to replace Firebase config keys with your own in firebaseConfig.js.
+
+
+
