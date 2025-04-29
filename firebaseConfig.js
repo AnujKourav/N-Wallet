@@ -2,7 +2,7 @@
 
 // Your Firebase Project Configuration
 const firebaseConfig = {
-    apiKey: "AIzaSyB_SMJr6G95T_PMkQ50Kj4l8SFiWzP2qhY",
+    apiKey: "...",
     authDomain: "nwallet-4fe43.firebaseapp.com",
     projectId: "nwallet-4fe43",
     storageBucket: "nwallet-4fe43.appspot.com",
